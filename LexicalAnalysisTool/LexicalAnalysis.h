@@ -11,6 +11,7 @@
 #include<list>
 #include<string>
 #include<set>
+#include<map>
 #include<Windows.h>
 #include<direct.h>
 #define ALPHABET_MAX 50 //字符的个数
@@ -18,7 +19,7 @@
 #define NFA_COL_MAX	51	//NFA的列
 #define START_STATUS_MAX 39//开始状态的个数
 #define END_STATUS_MAX 92	//结束状态的个数
-#endif
+
 /*字符类型*/
 enum ENUM_EndStatus {
 	logcial_symbo1 = 1,//逻辑符号,
@@ -38,10 +39,16 @@ enum ENUM_EndStatus {
 	underline,//下划线
 	comma,//逗号
 };
-
+using namespace std;
 class LexicalAnalysis {
+
+private:
+	void ini_data(void);
+	vector<int> edge(int s, char c);
+	vector<int>dfa_edge(vector<int>&vec, char ch);
 	std::vector<int> closure(int s);
 	const static char  alphabet[ALPHABET_MAX];//字符数组
 	const static int  nfa[NFA_ROW_MAX][NFA_COL_MAX];//nfa自动机
-
+	map<char, int>alphabetMapIndex;//把字符映射到在数组中的下标 
 };
+#endif

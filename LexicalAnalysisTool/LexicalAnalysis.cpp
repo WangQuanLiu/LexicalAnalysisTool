@@ -750,7 +750,60 @@ std::vector<int> LexicalAnalysis::closure(int s)//×´Ì¬S£¬ÇóÎŞĞèÈÎºÎ×Ö·û¶øµÃµ½µÄ×
 		sets.insert(nextStatus);
 		nextStatus = nfa[nextStatus][50];
 	}
+
 	status.insert(status.end(), sets.begin(), sets.end());
 	return status;
 	
+}
+/*
+ÊäÈë£ºvecÎª×´Ì¬£¬chÎª×Ö·û
+¹¦ÄÜ£º	dfa_edgeº¯ÊıÊÇÊäÈëÒ»×´Ì¬¼¯ºÏ£¬È»ºó·µ»Ø³öÕâ¸ö×´Ì¬¼¯ºÏ³ÔÈë×Ö·ûchºóµÃµ½µÄÒ»×é×´Ì¬¼¯ºÏ
+Êä³ö£ºÊä³öÕâ¸ö×´Ì¬³ÔÈë×Ö·ûchºóµÄ×´Ì¬¼¯ºÏ
+*/
+std::vector<int> LexicalAnalysis::dfa_edge(vector<int>& vec, char ch)
+{
+	unsigned i, j;
+	vector<int>result, temp;//½á¹û¼¯ºÏ
+	set<int>s;
+	for (i = 0; i < vec.size(); i++) {//Ñ­»·¸ø³öÃ¿¸ö×´Ì¬
+		temp.clear();
+		temp = edge(vec[i], ch);
+		for (j = 0; j < temp.size(); j++) {//µÃµ½¼¯ºÏºóÓÃsetÀ´ÅĞ¶ÏÊÇ·ñÓĞÖØ¸´µÄ
+			if (s.count(temp[j]) == 0) {
+				s.insert(temp[j]);
+			}
+		}
+	}
+	result.insert(result.end(), s.begin(), s.end());
+	return result;
+}
+/*
+ÊäÈë£ºvoid
+¹¦ÄÜ£º³õÊ¼»¯Êı¾İ
+Êä³ö£ºvoid
+*/
+void LexicalAnalysis::ini_data(void)
+{
+	//³õÊ¼»¯alphabetMapIndex,Ê¹×Ö·ûÓöµ½³ÉÏÂ±ê 
+	for (int i = 0; i < ALPHABET_MAX; i++) {
+		alphabetMapIndex[alphabet[i]] = i;
+	}
+}
+/*
+ÊäÈë£ºsÎª×´Ì¬£¬cÎª×Ö·û
+¹¦ÄÜ£ºÇóÔÚ×´Ì¬S,ÊäÈë×Ö·ûC¶øµÃµ½µÄ×î´ó¼¯ºÏ
+Êä³ö£ºÒ»¸ö×´Ì¬¼¯ºÏ
+*/
+std::vector<int> LexicalAnalysis::edge(int s, char c)
+{
+	int   nextStates, index;
+	std::vector<int>status;
+	index = alphabetMapIndex[c];
+	nextStates = LexicalAnalysis::nfa[s][index];
+	if (nextStates) {
+		status.push_back(nextStates);
+		vector<int>temp = closure(nextStates);//ÕÒµ½Õâ¸ö×´Ì¬ÎŞĞèÊäÈë×Ö·ûµÄ×î´ó×´Ì¬
+		status.insert(status.end(), temp.begin(), temp.end());//È»ºó²åÈë
+	}
+	return status;
 }
