@@ -6,14 +6,14 @@ author:LiuWangQuan
 function:用于词法分析
 time:2020/12/27
 */
-const char LexicalAnalysis::alphabet[ALPHABET_MAX]{
+ const char  LexicalAnalysis::alphabet[ALPHABET_MAX]{
 	'0','1','2','3','4','5','6','7','8','9',
 	'a','b','c','d','e','f','g','h','i','j',
 	'k','l','m','n','o','p','q','r','s','t',
 	'u','v','w','x','y','z','>','<','=','+',
 	'-','*','/','(',')','\'','%','_','.',','
 };
-const int LexicalAnalysis::nfa[NFA_ROW_MAX][NFA_COL_MAX]{
+ const int  LexicalAnalysis::nfa[NFA_ROW_MAX][NFA_COL_MAX]{
 	/*
 	---------------字母表------------------
 	  0  1  2  3  4  5  6  7  8  9   a  b  c  d  e  f  g  h	  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z  >  <  =  +  -  *  /  (  )  '  %  _  .  , ε
@@ -736,3 +736,21 @@ const int LexicalAnalysis::nfa[NFA_ROW_MAX][NFA_COL_MAX]{
 	{ 0, 0  , 0 , 0 , 0 , 0 ,0  ,0  ,0  , 0 ,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0, 0 ,0  ,0  ,0  , 0, 0 ,  0,  0, 0,  0, 0 },//状态403 ,
 
 };
+/*
+输入：一个状态序号
+功能：状态S，求无需任何字符而得到的最大集合
+输出：一个状态集合
+*/
+std::vector<int> LexicalAnalysis::closure(int s)//状态S，求无需任何字符而得到的最大集合
+{
+	int nextStatus = nfa[s][50];//求有无不需要输入任何字符的边，即ε是否非0
+	std::vector<int>status;
+	std::set<int>sets;//校检是否有重复的状态被 加入，同时不会造成死循环
+	while (nextStatus != 0 && sets.count(nextStatus) == 0) {//如果不为0就表示存在有无需任何字符的边													
+		sets.insert(nextStatus);
+		nextStatus = nfa[nextStatus][50];
+	}
+	status.insert(status.end(), sets.begin(), sets.end());
+	return status;
+	
+}

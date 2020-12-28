@@ -10,6 +10,7 @@
 #include<cstdlib>
 #include<list>
 #include<string>
+#include<set>
 #include<Windows.h>
 #include<direct.h>
 #define ALPHABET_MAX 50 //字符的个数
@@ -18,6 +19,7 @@
 #define START_STATUS_MAX 39//开始状态的个数
 #define END_STATUS_MAX 92	//结束状态的个数
 #endif
+/*字符类型*/
 enum ENUM_EndStatus {
 	logcial_symbo1 = 1,//逻辑符号,
 	keyword,//关键字
@@ -36,8 +38,10 @@ enum ENUM_EndStatus {
 	underline,//下划线
 	comma,//逗号
 };
+
 class LexicalAnalysis {
-	static const char  alphabet[ALPHABET_MAX];//字符数组
-	
-	static const int  nfa[NFA_ROW_MAX][NFA_COL_MAX];//nfa自动机
+	std::vector<int> closure(int s);
+	const static char  alphabet[ALPHABET_MAX];//字符数组
+	const static int  nfa[NFA_ROW_MAX][NFA_COL_MAX];//nfa自动机
+
 };
