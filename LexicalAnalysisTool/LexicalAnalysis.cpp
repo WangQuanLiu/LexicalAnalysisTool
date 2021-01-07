@@ -736,6 +736,26 @@ time:2020/12/27
 	{ 0, 0  , 0 , 0 , 0 , 0 ,0  ,0  ,0  , 0 ,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0, 0 ,0  ,0  ,0  , 0, 0 ,  0,  0, 0,  0, 0 },//状态403 ,
 
 };
+//开始状态集
+const int LexicalAnalysis::startStatus[START_STATUS_MAX]{
+	1,15,24,45,71,78,93,108,118,127, //10
+	138,159,168,184,205,218,222,230, //8
+	247,256,263,269,275,280,286,288, //8
+	290,292,294,297,299,301,303,313,//8
+	325,331,375,402                 //4
+
+};
+//终态状态集
+const int LexicalAnalysis::endStatus[END_STATUS_MAX]{
+	4,5,6,8,10,14,17,23,29,33,38,41,44,53,56,//15
+	60,63,70,77,82,85,88,92,99,104,107,111,115,//13
+	117,123,126,131,140,144,147,151,158,164,167,//11
+	170,174,178,183,189,193,195,200,204,209,211,//11
+	217,221,229,240,246,252,255,262,268,274,279,//11
+	285,287,289,291,293,295,296,297,298,300,302,//11
+	309,312,315,321,327,339,342,359,365,366,370,//11
+	374,379,382,386,397,401,403//7
+};
 /*
 输入：一个状态序号
 功能：状态S，求无需任何字符而得到的最大集合
@@ -786,7 +806,7 @@ void LexicalAnalysis::ini_data(void)
 {
 	//初始化alphabetMapIndex,使字符遇到成下标 
 	for (int i = 0; i < ALPHABET_MAX; i++) {
-		alphabetMapIndex[alphabet[i]] = i;
+		alphabetMapIndex[alphabet[i]] = i+1;
 	}
 }
 /*
@@ -796,9 +816,16 @@ void LexicalAnalysis::ini_data(void)
 */
 std::vector<int> LexicalAnalysis::edge(int s, char c)
 {
-	int   nextStates, index;
+	int   nextStates, index=-1;
 	std::vector<int>status;
-	index = alphabetMapIndex[c];
+	try {
+		index = alphabetMapIndex[c];
+		if (index <= 0 || index >= ALPHABET_MAX)throw myException("function edge:index error!");
+	}
+	catch (myException&m) {
+		m.what();
+	}
+	index--;
 	nextStates = LexicalAnalysis::nfa[s][index];
 	if (nextStates) {
 		status.push_back(nextStates);

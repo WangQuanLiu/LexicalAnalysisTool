@@ -12,13 +12,14 @@
 #include<string>
 #include<set>
 #include<map>
+#include"myException.h"
 #include<Windows.h>
 #include<direct.h>
 #define ALPHABET_MAX 50 //字符的个数
 #define	NFA_ROW_MAX	404	//NFA的行
 #define NFA_COL_MAX	51	//NFA的列
-#define START_STATUS_MAX 39//开始状态的个数
-#define END_STATUS_MAX 92	//结束状态的个数
+#define START_STATUS_MAX 38//开始状态的个数
+#define END_STATUS_MAX 90	//结束状态的个数
 
 /*字符类型*/
 enum ENUM_EndStatus {
@@ -41,14 +42,16 @@ enum ENUM_EndStatus {
 };
 using namespace std;
 class LexicalAnalysis {
-
 private:
 	void ini_data(void);
 	vector<int> edge(int s, char c);
 	vector<int>dfa_edge(vector<int>&vec, char ch);
 	std::vector<int> closure(int s);
+	const static int startStatus[START_STATUS_MAX];//开始状态集
+	const static int endStatus[END_STATUS_MAX];//结束状态集
 	const static char  alphabet[ALPHABET_MAX];//字符数组
-	const static int  nfa[NFA_ROW_MAX][NFA_COL_MAX];//nfa自动机
-	map<char, int>alphabetMapIndex;//把字符映射到在数组中的下标 
+	const static int   nfa[NFA_ROW_MAX][NFA_COL_MAX];//nfa自动机
+
+	map<char, int>	   alphabetMapIndex;//把字符映射到在数组中的下标 
 };
 #endif
