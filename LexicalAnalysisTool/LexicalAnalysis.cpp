@@ -834,3 +834,98 @@ std::vector<int> LexicalAnalysis::edge(int s, char c)
 	}
 	return status;
 }
+StatusSet::StatusSet(initializer_list<int> list)
+{
+	(*this).status = list;
+	sort(status.begin(), status.end());
+}
+StatusSet::StatusSet(vector<int>& vec)
+{
+	status = vec;
+	sort(status.begin(), status.end());
+
+}
+StatusSet& StatusSet::operator=(initializer_list<int> list)
+{
+	initializer_list<int>::iterator begin, end;
+	status.clear();
+	begin = list.begin(), end = list.end();
+	while (begin != end) {
+		status.push_back(*begin);
+		begin++;
+	}
+	sort(status.begin(), status.end());
+	return *this;
+}
+vector<int> StatusSet::get_set()
+{
+	return status;
+}
+StatusSet & StatusSet::operator=(vector<int>&vec)
+{
+	status = vec;
+	sort(status.begin(), status.end());
+	return *this;
+	
+}
+StatusSet & StatusSet::operator=(StatusSet & obj)
+{
+	status = obj.get_set();
+	return *this;
+	
+}
+bool StatusSet::operator==(StatusSet & obj)const
+{
+	if (status.size() != obj.status.size())return false;
+	/*set<int>s1, s2;
+	{
+		int i;
+		for (i = 0; i < obj.status.size(); i++) {
+			s1.insert(status[i]);
+			s2.insert(obj.status[i]);
+		}
+	}
+	if (s1 == s2)return true;*/
+	if (this->status == obj.status)return true;
+	return false;
+}
+/*
+输入：sta为状态,ch为字符，val为值
+功能：映射状态到ch字符的值为val
+输出：void
+
+*/
+void ConverTable::add_map(int sta, char ch, int val)
+{
+	static vector<int>vec(ALPHABET_MAX, 0);//为一行的初始值 ，为50个0
+	if (mapStatus.count(sta) == 0) {//不为空则新建一行
+		mapStatus[sta] = this->status.size();//一个状态集映射到另一个状态集
+		status.push_back(vec);
+	}
+	int index(character_conversion_to_index(LexicalAnalysis::alphabet, ALPHABET_MAX, ch));//字符对应的数组下标
+	status[mapStatus[sta]][index] = val;//设置值
+}
+
+inline int ConverTable::get_values(int sta, char ch)
+{
+	int index(character_conversion_to_index(LexicalAnalysis::alphabet, ALPHABET_MAX, ch));
+	return status[mapStatus[sta]][index];
+}
+
+vector<vector<int>> ConverTable::getStatus()
+{
+	return status;
+}
+inline int  character_conversion_to_index(const char alphabet[], size_t size, char ch)
+{
+	int index = 0;
+	unsigned i;
+	for (i = 0; i < size; i++) {
+		if (ch == alphabet[i])
+		{
+			index = i;
+			break;
+		}
+	}
+	return index;
+}
