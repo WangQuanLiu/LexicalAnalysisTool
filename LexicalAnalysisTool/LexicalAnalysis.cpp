@@ -294,13 +294,13 @@ time:2020/12/27
 	  0  1  2  3  4  5  6  7  8  9   a  b   c   d  e   f  g   h    i  j   k   l   m   n   o   p  q   r   s  t    u  v  w   x   y  z  >  <   =  +  -  *  / (   )  '  %   _  .  , ε
 	*/
 	{ 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0,  0, 0,  0, 0,  0,  0, 0 , 0 , 0 ,0 ,  0,  0,  0,  0,169,  0, 0,  0 , 0, 0 ,  0, 0,0 ,  0,  0, 0, 0, 0,  0, 0, 0 ,0 ,0 ,0 ,0, 0 ,0 , 0, 0, 0, 0 },//状态168 开始状态
-	{ 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0,  0, 0,  0, 0,  0,  0, 0 , 0 , 0 ,0 ,  0,  0,  0,170,  0,179, 0, 171, 0, 0 ,175, 0,0 ,  0,  0, 0, 0, 0,  0, 0, 0 ,0 ,0 ,0 ,0, 0 ,0 , 0, 0, 0, 0 },//状态169
+	{ 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0,  0, 0,  0, 0,  0,  0, 0 , 0 , 0 ,0 ,  0,  0,  0,170,  0,179, 0, 171, 0, 0 ,175, 0,0 ,  0,  0, 0, 0, 0,  0, 0, 0 ,0 ,0 ,0 ,0, 0 ,0 , 0, 0, 0, 0 },//状态169 
 	{ 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0,  0, 0,  0, 0,  0,  0, 0 , 0 , 0 ,0 ,  0,  0,  0,  0,  0,  0, 0,  0 , 0, 0 ,  0, 0,0 ,  0,  0, 0, 0, 0,  0, 0, 0 ,0 ,0 ,0 ,0, 0 ,0 , 0, 0, 0, 0 },//状态170 on
 /*
 	---------------字母表------------------
 	  0  1  2  3  4  5  6  7  8  9   a  b   c   d   e   f  g   h    i  j   k   l   m   n   o   p  q   r   s  t    u  v  w   x   y  z  >  <   =  +  -  *  / (   )  '  %   _  .  , ε
 	*/
-	{ 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0,  0, 0,  0,172,  0,  0, 0 , 0 , 0 ,0 ,  0,  0,  0,  0,  0,  0, 0,  0 , 0, 0 ,  0, 0,0 ,  0,  0, 0, 0, 0,  0, 0, 0 ,0 ,0 ,0 ,0, 0 ,0 , 0, 0, 0, 0 },//状态171
+	{ 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0,  0, 0,  0,172,  0,  0, 0 , 0 , 0 ,0 ,  0,  0,  0,  0,  0,  0, 0,  0 , 0, 0 ,  0, 0,0 ,  0,  0, 0, 0, 0,  0, 0, 0 ,0 ,0 ,0 ,0, 0 ,0 , 0, 0, 0, 0 },//状态171 or
 	{ 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0,  0, 0,  0,  0,173,  0, 0 , 0 , 0 ,0 ,  0,  0,  0,  0,  0,  0, 0,  0 , 0, 0 ,  0, 0,0 ,  0,  0, 0, 0, 0,  0, 0, 0 ,0 ,0 ,0 ,0, 0 ,0 , 0, 0, 0, 0 },//状态172
 	{ 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0,  0, 0,  0,  0,  0,  0, 0 , 0 , 0 ,0 ,  0,  0,  0,  0,  0,  0, 0, 174, 0, 0 ,  0, 0,0 ,  0,  0, 0, 0, 0,  0, 0, 0 ,0 ,0 ,0 ,0, 0 ,0 , 0, 0, 0, 0 },//状态173
 	{ 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0,  0, 0,  0,  0,  0,  0, 0 , 0 , 0 ,0 ,  0,  0,  0,  0,  0,  0, 0,  0 , 0, 0 ,  0, 0,0 ,  0,  0, 0, 0, 0,  0, 0, 0 ,0 ,0 ,0 ,0, 0 ,0 , 0, 0, 0, 0 },//状态174 order
@@ -734,7 +734,12 @@ time:2020/12/27
 	*/
 	{ 0, 0  , 0 , 0 , 0 , 0 ,0  ,0  ,0  , 0 ,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0, 0 ,0  ,0  ,0  , 0, 0 ,  0,  0, 0,403, 0 },//状态402 开始状态
 	{ 0, 0  , 0 , 0 , 0 , 0 ,0  ,0  ,0  , 0 ,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0, 0 ,0  ,0  ,0  , 0, 0 ,  0,  0, 0,  0, 0 },//状态403 ,
-
+/*
+	---------------字母表------------------
+	   0  1   2   3   4   5   6   7   8   9   a    b   c   d  e   f   g   h   i   j   k   l    m   n   o   p   q   r   s   t   u   v   w   x   y   z   >   <   =   +  -  *   /  (      )  '  %   _   .   , ε
+	*/
+	{ 0, 0  , 0 , 0 , 0 , 0 ,0  ,0  ,0  , 0 ,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,405,  0, 0 ,0  ,0  ,0  , 0, 0 ,  0,  0, 0,  0, 0 },//状态404 开始状态
+	{ 0, 0  , 0 , 0 , 0 , 0 ,0  ,0  ,0  , 0 ,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0,  0,  0,  0, 0 ,0  ,0  ,0  , 0, 0 ,  0,  0, 0,  0, 0 },//状态405 =
 };
 //开始状态集
 const int LexicalAnalysis::startStatus[START_STATUS_MAX]{
@@ -742,7 +747,7 @@ const int LexicalAnalysis::startStatus[START_STATUS_MAX]{
 	138,159,168,184,205,218,222,230, //8
 	247,256,263,269,275,280,286,288, //8
 	290,292,294,297,299,301,303,313,//8
-	325,331,375,402                 //4
+	325,331,375,402,404                 //4
 
 };
 //终态状态集
@@ -750,11 +755,11 @@ const int LexicalAnalysis::endStatus[END_STATUS_MAX]{
 	4,5,6,8,10,14,17,23,29,33,38,41,44,53,56,//15
 	60,63,70,77,82,85,88,92,99,104,107,111,115,//13
 	117,123,126,131,140,144,147,151,158,164,167,//11
-	170,174,178,183,189,193,195,200,204,209,211,//11
+	170,171,174,178,183,189,193,195,200,204,209,211,//11
 	217,221,229,240,246,252,255,262,268,274,279,//11
 	285,287,289,291,293,295,296,297,298,300,302,//11
 	309,312,315,321,327,339,342,359,365,366,370,//11
-	374,379,382,386,397,401,403//7
+	374,379,382,386,397,401,403,405//7
 };
 /*
 输入：一个状态序号
@@ -802,6 +807,11 @@ std::vector<int> LexicalAnalysis::dfa_edge(vector<int>& vec, char ch)
 功能：初始化数据
 输出：void
 */
+void LexicalAnalysis::run()
+{
+	nfa_conversion_to_dfa();
+	save();
+}
 void LexicalAnalysis::ini_data(void)
 {
 	//初始化alphabetMapIndex,使字符遇到成下标 
@@ -819,13 +829,21 @@ std::vector<int> LexicalAnalysis::edge(int s, char c)
 	int   nextStates, index=-1;
 	std::vector<int>status;
 	try {
-		index = alphabetMapIndex[c];
-		if (index <= 0 || index >= ALPHABET_MAX)throw myException("function edge:index error!");
+		//index = alphabetMapIndex[c];
+		int i;
+		for (i = 0; i < ALPHABET_MAX; i++) {
+			if (c == LexicalAnalysis::alphabet[i])
+			{
+				index = i;
+				break;
+			}
+		}
+		if (index < 0 || index >= ALPHABET_MAX)throw myException("function edge:index error!");
 	}
 	catch (myException&m) {
 		m.what();
 	}
-	index--;
+	//index--;
 	nextStates = LexicalAnalysis::nfa[s][index];
 	if (nextStates) {
 		status.push_back(nextStates);
@@ -837,12 +855,12 @@ std::vector<int> LexicalAnalysis::edge(int s, char c)
 StatusSet::StatusSet(initializer_list<int> list)
 {
 	(*this).status = list;
-	sort(status.begin(), status.end());
+	//sort(status.begin(), status.end());
 }
 StatusSet::StatusSet(vector<int>& vec)
 {
 	status = vec;
-	sort(status.begin(), status.end());
+	//sort(status.begin(), status.end());
 
 }
 StatusSet& StatusSet::operator=(initializer_list<int> list)
@@ -854,17 +872,25 @@ StatusSet& StatusSet::operator=(initializer_list<int> list)
 		status.push_back(*begin);
 		begin++;
 	}
-	sort(status.begin(), status.end());
+	//sort(status.begin(), status.end());
 	return *this;
+}
+int StatusSet::operator[](const int index)
+{
+	return status[index];
 }
 vector<int> StatusSet::get_set()
 {
 	return status;
 }
+size_t StatusSet::size()
+{
+	return status.size();
+}
 StatusSet & StatusSet::operator=(vector<int>&vec)
 {
 	status = vec;
-	sort(status.begin(), status.end());
+	//sort(status.begin(), status.end());
 	return *this;
 	
 }
@@ -877,7 +903,7 @@ StatusSet & StatusSet::operator=(StatusSet & obj)
 bool StatusSet::operator==(StatusSet & obj)const
 {
 	if (status.size() != obj.status.size())return false;
-	/*set<int>s1, s2;
+	set<int>s1, s2;
 	{
 		int i;
 		for (i = 0; i < obj.status.size(); i++) {
@@ -885,8 +911,8 @@ bool StatusSet::operator==(StatusSet & obj)const
 			s2.insert(obj.status[i]);
 		}
 	}
-	if (s1 == s2)return true;*/
-	if (this->status == obj.status)return true;
+	if (s1 == s2)return true;
+//	if (this->status == obj.status)return true;
 	return false;
 }
 /*
@@ -916,6 +942,10 @@ vector<vector<int>> ConverTable::getStatus()
 {
 	return status;
 }
+map<int, int> ConverTable::getMapStatus()
+{
+	return mapStatus;
+}
 inline int  character_conversion_to_index(const char alphabet[], size_t size, char ch)
 {
 	int index = 0;
@@ -928,4 +958,129 @@ inline int  character_conversion_to_index(const char alphabet[], size_t size, ch
 		}
 	}
 	return index;
+}
+/*
+输入：void
+功能：初始化结束状态所映射的词法类别
+输出：void
+*/
+inline void LexicalAnalysis::init_endStatus_map_category()
+{
+	int i;
+	endStatus_map_category[8] = LOGCIAL_SYMBOL; //逻辑类
+	endStatus_map_category[170] = LOGCIAL_SYMBOL;//逻辑类
+	endStatus_map_category[211] = LOGCIAL_SYMBOL;//逻辑类
+
+	endStatus_map_category[321] = REAL;//浮点类
+	endStatus_map_category[104] = CHARACTER;//字符类
+	endStatus_map_category[41] = CHARACTER;//字符类
+	endStatus_map_category[315] = NUM;//数字类
+	endStatus_map_category[327] = ID;//id类
+	endStatus_map_category[342] = CHARACTERMATCH;//字符匹配类
+	endStatus_map_category[287] = ADD_SUB_SYMBOL;//加减类
+	endStatus_map_category[289] = ADD_SUB_SYMBOL;//加减类
+
+	endStatus_map_category[291] = MUL_SYMBOL;
+	endStatus_map_category[293] = DIV_SYMBOL;
+
+	endStatus_map_category[405] = ASSIGNMENT_SYMBOL;
+
+	endStatus_map_category[295] = COMPARE_SYMBOL;
+	endStatus_map_category[296] = COMPARE_SYMBOL;
+	endStatus_map_category[297] = COMPARE_SYMBOL;
+	endStatus_map_category[298] = COMPARE_SYMBOL;
+
+	endStatus_map_category[300] = L_BRACKET;
+	endStatus_map_category[302] = R_BRACKET;
+	endStatus_map_category[403] = COMMA;
+	for (i = 0; i < END_STATUS_MAX; i++) {
+		if (endStatus_map_category.count(endStatus[i]) == 0) {
+			endStatus_map_category[endStatus[i]] = KEYWORD;//设置键值
+		}
+	}
+
+}
+
+void LexicalAnalysis::nfa_conversion_to_dfa()
+{
+	StatusSet s;
+	int j = 0, p = 1, c, k;
+	status.push_back(s);//第一个状态为空
+	{
+		vector<int>vec;
+		for (int i = 0; i < START_STATUS_MAX; i++)//初始化起始状态
+			vec.push_back(startStatus[i]);
+		s = vec;
+	}
+	//	s.print();
+	status.push_back(s);//第二个状态为起始状态
+	while (j <= p) {
+	
+		for (c = 0; c < ALPHABET_MAX; c++) {//字符集
+			s = dfa_edge(status[j].get_set(), alphabet[c]);//求在状态集status[j]中吃掉字符c得到状态集
+
+			for (k = 0; k <= p; k++) {//在status中有重复的就跳出
+				if (status[k] == s)break;
+			}
+			if (k <= p) {//在status中有与s相同的状态集
+				conver.add_map(j, alphabet[c], k);//添加值 ，即状态j，在字符alphabet[c]，值为k
+			}
+			else {
+				status.push_back(s);//没有与s相同的状态集则新添一个
+				p++;//状态集个数自增
+				conver.add_map(j, alphabet[c], p);
+			}
+
+		}
+		j++;
+
+	}
+}
+
+bool LexicalAnalysis::save_status()
+{
+	FILE*file = fopen("C:\\Users\\Administrator\\Desktop\\status.txt", "w");
+	if (file == NULL)return false;
+	fprintf(file, "total size:%d\n", status.size());
+	int i,j;
+	for (i = 0; i < status.size(); i++) {
+		fprintf(file, "size:%d\n", status[i].size());
+		for (j = 0; j < status[i].size(); j++) {
+			fprintf(file, "%d ", status[i][j]);
+		}
+		fprintf(file, "\n");
+	}
+	fclose(file);
+	return true;
+}
+
+bool LexicalAnalysis::save_conver()
+{
+	FILE*file = fopen("C:\\Users\\Administrator\\Desktop\\converStatus.txt", "w");
+	if (file == NULL)return false;
+	vector<vector<int>>vec = this->conver.getStatus();
+	fprintf(file, "total size:%d\n", vec.size());
+	int i, j;
+	for (i = 0; i < vec.size(); i++) {
+		fprintf(file, "size:%d\n", vec[i].size());
+		for (j = 0; j < vec[i].size(); j++) {
+			fprintf(file, "%d ", vec[i][j]);
+		}
+		fprintf(file, "\n");
+	}
+	fclose(file);
+	file = fopen("C:\\Users\\Administrator\\Desktop\\converMapStatus.txt", "w");
+	if (file == NULL)return false;
+	map<int, int>mapStatus = this->conver.getMapStatus();
+	fprintf(file, "total size:%d\n", mapStatus.size());
+	for (map<int, int>::iterator begin = mapStatus.begin(); begin != mapStatus.end(); begin++) {
+		fprintf(file, "%d %d\n", (*begin).first, (*begin).second);
+	}
+	fclose(file);
+	return true;
+}
+
+bool LexicalAnalysis::save()
+{
+	return save_conver()&&save_status();
 }
