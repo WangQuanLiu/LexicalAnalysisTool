@@ -16,10 +16,10 @@
 #include<Windows.h>
 #include<direct.h>
 #define ALPHABET_MAX 50 //字符的个数
-#define	NFA_ROW_MAX	406	//NFA的行
+#define	NFA_ROW_MAX	407	//NFA的行
 #define NFA_COL_MAX	51	//NFA的列
-#define START_STATUS_MAX 39//开始状态的个数
-#define END_STATUS_MAX 92	//结束状态的个数
+#define START_STATUS_MAX 41//开始状态的个数
+#define END_STATUS_MAX 96	//结束状态的个数
 
 
 #define KEYWORD "keyword"
